@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品牌大全</title>
+  <!-- 导入rem.js -->
+  <script src="./js/rem.js"></script>
+  <!-- 导入mui的css -->
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <!-- 导入字体css -->
+  <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+  <!-- 导入自己的less -->
+  <link rel="stylesheet/less" href="./less/brandlist.less">
+  <!-- 导入less.js -->
+  <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 公共头部 -->
+  <header id="header">
+    <div class="header">
+      <div class="left">
+        <img src="http://static.manmanbuy.com/m/img/mlogo.png" alt="">
+      </div>
+      <div class="center">
+        <form action="#">
+          <input type="search" placeholder="商品比价、查历史价">
+          <i class="fa fa-search"></i>
+        </form>
+      </div>
+      <div class="right">
+        <div class="download">下载</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <ul class="clearfix nav-bar">
+            <li class="active"><a href="#">首页</a></li>
+            <li><a href="#">省钱控</a></li>
+            <li><a href="#">查历史价</a></li>
+            <li><a href="#">比价搜索</a></li>
+            <li><a href="#">国内折扣</a></li>
+            <li><a href="#">白菜价</a></li>
+            <li><a href="#">小时风云榜</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主体区域 -->
+  <main id="main">
+    <div class="title">
+      <a href="#">首页</a>
+      <span>></span>
+      <a href="#">品牌大全</a>
+    </div>
+    <div class="content">
+      <div class="sub-title">热门品牌排行</div>
+      <div class="brand-list">
+        <!-- mui普通列表 -->
+        <ul class="mui-table-view">
+          <!-- 模板动态添加品牌标题列表 -->
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- 公共底部 -->
+  <footer id="footer">
+    <div class="f-top bt bb">
+      <div class="mui-row">
+        <div class="mui-col-xs-4 br"><a href="#">登录</a></div>
+        <div class="mui-col-xs-3 br"><a href="#">注册</a></div>
+        <div class="mui-col-xs-5"><a href="#"><i class="fa fa-arrow-up"></i> 返回顶部</a></div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p class="m-app">
+        <a>手机APP下载</a>
+        慢慢买手机版 -- 掌上比价平台
+      </p>
+      <p class="m-link"><a href="#">m.manmanbuy.com</a></p>
+    </div>
+  </footer>
+
+  <!-- 创建品牌名称列表模板 -->
+  <script type="text/html" id="brandTitleTpl">
+    {{each result value}}
+    <li class="mui-table-view-cell">
+      <a class="mui-navigate-right" data-id="{{value.brandTitleId}}" data-title="{{value.brandTitle}}">{{value.brandTitle}}</a>
+    </li>
+    {{/each}}
+  </script>
+
+  <!-- 引入zepto.js -->
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <!-- 导入mui的js -->
+  <script src="./lib/mui/js/mui.min.js"></script>
+  <!-- 引入模板引擎.js -->
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <!-- 引入base.js -->
+  <script src="./js/base.js"></script>
+  <!-- 导入自己的js -->
+  <script src="./js/brandlist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+@import 'base.less';
+
+/* 主体区域样式 */
+#main {
+  background-color: #f2f2f2;
+  .title {
+    height: 36px;
+    line-height: 36px;
+    padding-left: 8px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    color: #5a5a5a;
+    font-size: 14px;
+    a {
+      color: #5a5a5a;
+    }
+  }
+  .content {
+    .sub-title {
+      font-size: 16px;
+      color: #874604;
+      background-color: #eee;
+      padding-left: 10px;
+      height: 42px;
+      line-height: 42px;
+      border: 1px solid #ccc;
+      margin: 10px 5px;
+    }
+    .brand-list {
+      .mui-table-view {
+        background-color: #f2f2f2;
+        &::before,
+        &::after {
+          height: 0;
+        }
+        .mui-table-view-cell {
+          &::after {
+            right: 0.15rem;
+            background-color: #6d6b6b;
+          }
+          .mui-navigate-right {
+            display: block;
+            height: 41px;
+            border-bottom: 0;
+            font-size: 16px;
+            font-weight: bold;
+            &::after {
+              content: '\e581';
+              color: #909090;
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,226 @@
+@import 'base.less';
+/* 主体区域样式 */
+
+#main {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding-bottom: 20px;
+  /* 十大品牌列表 */
+  #brandTopList {
+    width: 100%;
+    .title {
+      height: 43px;
+      line-height: 43px;
+      padding-left: 8px;
+      border-top: 1px solid #ebebeb;
+      border-bottom: 1px solid #ccc;
+      background-color: #ebebeb;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+      color: #874604;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .content {
+      .brandtop-list {
+        .mui-table-view {
+          &::before,
+          &::after {
+            height: 0;
+          }
+          .mui-table-view-cell {
+            &::after {
+              left: 0;
+              right: 0;
+              background-color: #cccccc;
+            }
+            .mui-navigate-right {
+              display: block;
+              border-bottom: 0;
+              font-size: 16px;
+              font-weight: bold;
+              display: flex;
+              &::after {
+                color: #909090;
+                font-size: 20px;
+                font-weight: 600;
+              }
+              .left-num {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                background-color: red;
+                color: white;
+                font-size: 12px;
+                margin-right: 10px;
+              }
+              .right-brandinfo {
+                p {
+                  color: #000000;
+                  font-size: 16px;
+                  font-weight: normal;
+                  &.sale-title {
+                    color: #999999;
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* 销量列表 */
+  #saleTopList {
+    .title {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 8px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background-color: #ebebeb;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+      color: #874604;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .content {
+      >ul {
+        >li {
+          >a {
+            white-space: normal;
+            .mui-media-object {
+              max-width: 100px;
+              height: 100px;
+            }
+            .mui-media-body {
+              .product-info {
+                display: flex;
+                justify-content: space-between;
+                margin: 4px 0;
+                .price {
+                  font-size: 18px;
+                  color: #ea3900;
+                }
+                span {
+                  i {
+                    font-size: 18px;
+                    color: #ff9000;
+                  }
+                }
+              }
+              .description {
+                color: #5a5a5a;
+                /* 使文字显示固定行，溢出部分显示省略号 */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+              }
+              .price-and-comment {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .history-price {
+      padding: 10px;
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /* 用户评论列表 */
+  #userComments {
+    .title {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 8px;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      background-color: #ebebeb;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+      color: #874604;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .content {
+      ul {
+        li {
+          padding: 10px;
+          a {
+            white-space: normal;
+            .mui-media-object {
+              width: 80px;
+              height: 80px;
+              margin-right: 10px;
+            }
+            .mui-media-body {
+              height: 80px;
+              padding: 0 10px;
+              span {
+                /* 使文字显示固定行，溢出部分显示省略号 */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+              }
+            }
+          }
+        }
+        .comment-info {
+          background-color: #fff;
+          padding: 10px;
+          margin-top: 10px;
+          .user-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 4px 0;
+            .user-name {
+              font-size: 14px;
+              color: #999999;
+              i {
+                font-size: 16px;
+                color: #ff9000;
+              }
+            }
+            >span {
+              font-size: 14px;
+              color: #999999;
+            }
+          }
+          .user-comment {
+            margin-top: 10px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  /* 底部标题 */
+  #bottomHeader {
+    .title {
+      height: 36px;
+      line-height: 36px;
+      padding-left: 8px;
+      border-top: 1px solid #ebebeb;
+      border-bottom: 1px solid #ccc;
+      background-color: #ebebeb;
+      background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+      color: #5a5a5a;
+      font-size: 14px;
+      a {
+        color: #5a5a5a;
+      }
+    }
+  }
+}

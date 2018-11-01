@@ -1,0 +1,195 @@
+/* 头部底部公共样式 复制粘贴进你们的base.less文件中 */
+
+/* 定义变量主题颜色 */
+
+@main-color: #ff6c00;
+/* 定义边框颜色 */
+
+@border-color: #e0e0e0;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  padding-top: 0.82rem;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+.clearfix {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.bt {
+  border-top: 0.01rem solid #c4c4c4;
+}
+
+.br {
+  border-right: 0.01rem solid #c4c4c4;
+}
+
+.bb {
+  border-bottom: 0.01rem solid #c4c4c4;
+}
+
+.bl {
+  border-left: 0.01rem solid #c4c4c4;
+}
+
+/* 头部样式 */
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+  .header {
+    display: flex;
+    padding: 0.07rem 0.1rem;
+    height: 0.45rem;
+    border-bottom: 0.01rem solid @border-color;
+    .left {
+      width: 0.8rem;
+      padding-top: 0.03rem;
+      img {
+        width: 100%;
+      }
+    }
+    .center {
+      flex: 1;
+      padding-left: 0.1rem;
+      form {
+        position: relative;
+        input {
+          margin-bottom: 0;
+          background-color: #eee;
+          width: 2.1rem;
+          height: 0.3rem;
+          border-radius: 0.15rem;
+          font-size: 0.14rem;
+          padding-left: 0.25rem;
+          text-align: left;
+          &::placeholder {
+            color: @main-color;
+          }
+        }
+        i {
+          position: absolute;
+          color: @main-color;
+          top: 0.07rem;
+          left: 0.08rem;
+          font-size: 0.14rem;
+        }
+      }
+    }
+    .right {
+      width: 0.4rem;
+      padding-top: 0.04rem;
+      .download {
+        font-size: 0.12rem;
+        line-height: 0.22rem;
+        color: @main-color;
+        border: 1px solid @main-color;
+        width: 0.35rem;
+        height: 0.22rem;
+        border-radius: 0.12rem;
+        text-align: center;
+      }
+    }
+  }
+  .nav {
+    position: relative;
+    height: 0.37rem;
+    .mui-scroll {
+      width: auto;
+    }
+    ul {
+      white-space: nowrap;
+      display: flex; // width: auto;
+      li {
+        float: left;
+        position: relative;
+        a {
+          display: block;
+          padding: 0.08rem 0.13rem;
+          font-size: 0.14rem;
+          font-weight: bold;
+          color: @main-color;
+        }
+        &.active::before {
+          content: '';
+          position: absolute;
+          height: 0.04rem;
+          width: 50%;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: @main-color;
+        }
+      }
+    }
+  }
+}
+
+/* 底部样式 */
+
+#footer {
+  .f-top {
+    >div {
+      >div {
+        a {
+          display: block;
+          text-align: center;
+          color: #5a5a5a;
+          font-size: 0.14rem;
+          padding: 0.05rem 0;
+          .fa-arrow-up {
+            position: relative;
+            top: -0.01rem;
+          }
+        }
+      }
+    }
+  }
+  .f-bottom {
+    p {
+      text-align: center;
+      font-size: 0.12rem;
+      color: #5a5a5a;
+      &:first-of-type {
+        padding-top: 0.15rem;
+        margin-bottom: 0;
+        a {
+          color: orangered;
+        }
+      }
+      &:last-of-type {
+        a {
+          color: #5a5a5a;
+        }
+      }
+    }
+  }
+}
