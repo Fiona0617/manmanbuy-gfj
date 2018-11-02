@@ -63,55 +63,7 @@
         <div class="brandtop-list">
           <!-- mui普通列表 -->
           <ul class="mui-table-view">
-            <li class="mui-table-view-cell">
-              <a class="mui-navigate-right">
-                <div class="left-num">
-                  <span>1</span>
-                </div>
-                <div class="right-brandinfo">
-                  <p>
-                    海信平板电视
-                  </p>
-                  <p class="sale-title">
-                    30天全网销量：112122件
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mui-table-view-cell">
-              <a class="mui-navigate-right">
-                <div class="left-num">
-                  <span>1</span>
-                </div>
-                <div class="right-brandinfo">
-                  <p>
-                    海信平板电视
-                  </p>
-                  <p class="sale-title">
-                    30天全网销量：
-                    <span class="sale-num">112122</span>
-                    件
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mui-table-view-cell">
-              <a class="mui-navigate-right">
-                <div class="left-num">
-                  <span>1</span>
-                </div>
-                <div class="right-brandinfo">
-                  <p>
-                    海信平板电视
-                  </p>
-                  <p class="sale-title">
-                    30天全网销量：
-                    <span class="sale-num">112122</span>
-                    件
-                  </p>
-                </div>
-              </a>
-            </li>
+            <!-- 模板动态添加十大品牌列表 -->
           </ul>
         </div>
       </div>
@@ -124,48 +76,7 @@
       </div>
       <div class="content">
         <ul class="mui-table-view">
-          <li class="mui-table-view-cell mui-media">
-            <a href="javascript:;">
-              <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
-              <div class="mui-media-body">
-                <p class="description">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
-                <div class="product-info">
-                  <div class="price">￥3399.00</div>
-                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i></span>
-                </div>
-                <p class="price-and-comment">报价(<span>4</span>) 全网评论(<span>10000</span>)</p>
-              </div>
-            </a>
-          </li>
-          <li class="mui-table-view-cell mui-media">
-            <a href="javascript:;">
-              <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
-              <div class="mui-media-body">
-                <p class="description">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
-                <div class="product-info">
-                  <div class="price">￥3399.00</div>
-                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i></span>
-                </div>
-                <p class="price-and-comment">报价(<span>4</span>) 全网评论(<span>10000</span>)</p>
-              </div>
-            </a>
-          </li>
-          <li class="mui-table-view-cell mui-media">
-            <a href="javascript:;">
-              <img class="mui-media-object mui-pull-left" src="http://pro-img.zuyushop.com/ProPic/20179/Thumb/Thumb_2017090008503540540.jpg">
-              <div class="mui-media-body">
-                <p class="description">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
-                <div class="product-info">
-                  <div class="price">￥3399.00</div>
-                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                      class="fa fa-star"></i></span>
-                </div>
-                <p class="price-and-comment">报价(<span>4</span>) 全网评论(<span>10000</span>)</p>
-              </div>
-            </a>
-          </li>
+          <!-- 模板动态添加销量列表 -->
         </ul>
       </div>
       <div class="history-price">
@@ -178,8 +89,7 @@
     <!-- 用户评论列表-->
     <section id="userComments">
       <div class="title">
-        <span class="brand-name">平板电视</span>
-        <span>最有用的用户评论</span>
+        <span class="brand-name">平板电视</span><span>最有用的用户评论</span>
       </div>
       <div class="content">
         <ul>
@@ -210,7 +120,7 @@
         <a href="#">首页</a>
         <span>></span>
         <a href="#">品牌大全</a>
-        <span>>平板电视哪个牌子好</span>
+        <span class="brand-name">平板电视</span><span>哪个牌子好</span>
       </div>
     </section>
 
@@ -252,6 +162,56 @@
           </div>
         </a>
       </li>
+    {{/each}}
+  </script>
+
+  <!-- 创建销量列表模板 -->
+  <script type="text/html" id="saleTopListTpl">
+    {{if totalCount==0}}
+      <p>暂无销量信息！</p>
+    {{else}}
+      {{each result value}}
+      <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+          <div class="mui-media-object mui-pull-left">
+            {{@value.productImg}}
+          </div>
+          <div class="mui-media-body">
+            <p class="description">{{value.productName}}</p>
+            <div class="product-info">
+              <div class="price">{{value.productPrice}}</div>
+              <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                  class="fa fa-star"></i></span>
+            </div>
+            <p class="price-and-comment"><span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;<span>{{value.productCom}}</span></p>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    {{/if}}
+  </script>
+
+  <!-- 创建用户评论模板 -->
+  <script type="text/html" id="userCommentsTpl">
+    {{each result value}}
+    <li class="mui-table-view-cell mui-media">
+      <a href="#">
+        <img class="mui-media-object mui-pull-left" src="http://pro.zuyushop.com:8015/ProPic/201411/small80/Thumb_2014110008364442033.jpg">
+        <div class="mui-media-body">
+          <p class="description">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
+        </div>
+        <div class="comment-info">
+          <div class="user-info">
+            <div class="user-name"><span>{{value.comName}}：</i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                  class="fa fa-star"></i><i class="fa fa-star"></i></span></div>
+            <span>{{value.comTime}}</span>
+          </div>
+          <div class="user-comment">
+            {{value.comContent}}
+          </div>
+        </div>
+      </a>
+    </li>
     {{/each}}
   </script>
 
