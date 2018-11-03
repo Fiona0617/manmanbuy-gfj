@@ -119,7 +119,7 @@
       <div class="title">
         <a href="#">首页</a>
         <span>></span>
-        <a href="#">品牌大全</a>
+        <a href="brandlist.html">品牌大全 ></a>
         <span class="brand-name">平板电视</span><span>哪个牌子好</span>
       </div>
     </section>
@@ -148,9 +148,9 @@
   <script type="text/html" id="brandTopListTpl">
     {{each result value}}
       <li class="mui-table-view-cell">
-        <a class="mui-navigate-right">
+        <a class="mui-navigate-right" data-categoryid="{{value.categoryId}}">
           <div class="left-num">
-            <span>{{value.brandId+1}}</span>
+            <span>{{value.num}}</span>
           </div>
           <div class="right-brandinfo">
             <p>
@@ -172,7 +172,7 @@
     {{else}}
       {{each result value}}
       <li class="mui-table-view-cell mui-media">
-        <a href="javascript:;">
+        <a href="#" data-productid="{{value.productId}}">
           <div class="mui-media-object mui-pull-left">
             {{@value.productImg}}
           </div>
@@ -196,9 +196,11 @@
     {{each result value}}
     <li class="mui-table-view-cell mui-media">
       <a href="#">
-        <img class="mui-media-object mui-pull-left" src="http://pro.zuyushop.com:8015/ProPic/201411/small80/Thumb_2014110008364442033.jpg">
+        <div class="mui-media-object mui-pull-left">
+          {{@value.productImg}}
+        </div>
         <div class="mui-media-body">
-          <p class="description">LG 49LF5400 49英寸 全高清 普通LED液晶电视</p>
+          <p class="description">{{value.productName}}</p>
         </div>
         <div class="comment-info">
           <div class="user-info">

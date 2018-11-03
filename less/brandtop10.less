@@ -33,6 +33,18 @@
               right: 0;
               background-color: #cccccc;
             }
+            &:nth-child(1) .left-num {
+              background-color: red;
+            }
+            &:nth-child(2) .left-num {
+              background-color: orange;
+            }
+            &:nth-child(3) .left-num {
+              background-color: #8adf5b;
+            }
+            &:nth-child(n+4) .left-num {
+              background-color: #c9c9c9;
+            }
             .mui-navigate-right {
               display: block;
               border-bottom: 0;
@@ -50,7 +62,6 @@
                 height: 20px;
                 line-height: 20px;
                 text-align: center;
-                background-color: red;
                 color: white;
                 font-size: 12px;
                 margin-right: 10px;
@@ -158,9 +169,11 @@
           a {
             white-space: normal;
             .mui-media-object {
-              width: 80px;
-              height: 80px;
               margin-right: 10px;
+              img {
+                width: 80px;
+                height: 80px;
+              }
             }
             .mui-media-body {
               height: 80px;
