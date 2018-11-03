@@ -1,0 +1,87 @@
+@import "base.less";
+
+body {
+  padding-top: 0;
+}
+
+/* 优惠券头部区域 */
+#couponHeader {
+  background-color: @main-color;
+  display: flex;
+  .left,
+  .right {
+    padding-top: 5px;
+    a {
+      display: block;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      i {
+        color: white;
+        font-size: 24px;
+      }
+    }
+  }
+  .middle {
+    flex: 1;
+    color: white;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+  }
+}
+
+/* 主体区域样式 */
+
+#main {
+  .title {
+    color: #9e9e9e;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 0;
+  }
+  .content {
+    .mui-table-view {
+      &::before,
+      &::after {
+        height: 0;
+      }
+      .mui-table-view-cell {
+        >a {
+          white-space: normal;
+          padding: 10px 10px;
+          &::after {
+            right: 0;
+          }
+          >.left {
+            width: 100px;
+            margin-right: 10px;
+            img {
+              width: 100%;
+            }
+          }
+          >.right {
+            .product-name {
+              color: black;
+              padding-right: 10px;
+              /* 使文字显示固定行，溢出部分显示省略号 */
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+            .product-price {
+              color: black;
+            }
+            .product-deadline {
+              color: #f0881f;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
