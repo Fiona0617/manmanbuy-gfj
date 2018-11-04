@@ -10,6 +10,8 @@
   <script src="./js/rem.js"></script>
   <!-- 导入mui的css -->
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <!-- 引入swiper.css -->
+  <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
   <!-- 导入字体css -->
   <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
   <!-- 导入自己的less -->
@@ -22,7 +24,7 @@
   <!-- 优惠券头部区域 -->
   <header id="couponHeader">
     <div class="left">
-      <a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+      <a href="#" onclick="javascript:history.back(-1);"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
     </div>
     <div class="middle">
       <span>优惠券</span>
@@ -43,6 +45,24 @@
       </ul>
     </div>
   </main>
+
+  <!-- 轮播图组件，swiper -->
+  <div class="mask" style="display: none;">
+    <div class="inner-slider">
+      <!-- 轮播图大容器 -->
+      <div class="swiper-container">
+        <!-- 轮播图所有图片容器 -->
+        <div class="swiper-wrapper">
+          <!-- swiper-slide 轮播图 每一项容器 -->
+          <!-- JS动态添加轮播图内容 -->
+        </div>
+        <!-- 左右箭头 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="close"><span>×</span></div>
+  </div>
 
   <!-- 公共底部 -->
   <footer id="footer">
@@ -66,7 +86,7 @@
   <script type="text/html" id="couponProductListTpl">
     {{each result value}}
       <li class="mui-table-view-cell">
-        <a class="mui-navigate-right" data-img="{{value.couponProductImg}}">
+        <a class="mui-navigate-right" data-num="{{value.num}}">
           <div class="left pull-left">
             {{@value.couponProductImg}}
           </div>
@@ -84,6 +104,8 @@
   <script src="./lib/zepto/zepto.min.js"></script>
   <!-- 导入mui的js -->
   <script src="./lib/mui/js/mui.min.js"></script>
+  <!-- 引入swiper.js -->
+  <script src="./lib/swiper/js/swiper.js"></script>
   <!-- 引入模板引擎.js -->
   <script src="./lib/artTemplate/template-web.js"></script>
   <!-- 引入base.js -->

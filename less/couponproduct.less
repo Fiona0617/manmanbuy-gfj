@@ -1,5 +1,11 @@
 @import "base.less";
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   padding-top: 0;
 }
@@ -10,36 +16,35 @@ body {
   display: flex;
   .left,
   .right {
-    padding-top: 5px;
+    padding-top: 0.05rem;
     a {
       display: block;
-      width: 44px;
-      height: 44px;
-      line-height: 44px;
+      width: 0.44rem;
+      height: 0.44rem;
+      line-height: 0.44rem;
       text-align: center;
       i {
         color: white;
-        font-size: 24px;
+        font-size: 0.24rem;
       }
     }
   }
   .middle {
     flex: 1;
     color: white;
-    font-size: 20px;
-    line-height: 44px;
+    font-size: 0.2rem;
+    line-height: 0.44rem;
     text-align: center;
   }
 }
 
 /* 主体区域样式 */
-
 #main {
   .title {
     color: #9e9e9e;
-    font-size: 14px;
+    font-size: 0.14rem;
     text-align: center;
-    padding: 5px 0;
+    padding: 0.05rem 0;
   }
   .content {
     .mui-table-view {
@@ -50,13 +55,13 @@ body {
       .mui-table-view-cell {
         >a {
           white-space: normal;
-          padding: 10px 10px;
+          padding: 0.1rem 0.1rem;
           &::after {
             right: 0;
           }
           >.left {
-            width: 100px;
-            margin-right: 10px;
+            width: 1rem;
+            margin-right: 0.1rem;
             img {
               width: 100%;
             }
@@ -64,7 +69,7 @@ body {
           >.right {
             .product-name {
               color: black;
-              padding-right: 10px;
+              padding-right: 0.1rem;
               /* 使文字显示固定行，溢出部分显示省略号 */
               overflow: hidden;
               text-overflow: ellipsis;
@@ -78,10 +83,52 @@ body {
             .product-deadline {
               color: #f0881f;
             }
-
           }
         }
       }
+    }
+  }
+}
+
+/* 遮罩层轮播图样式 */
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .inner-slider {
+    z-index: 1000;
+    width: 3rem;
+    height: 2.6rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide {
+          padding: 0.5rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .close {
+    width: 0.4rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    position: absolute;
+    right: 0;
+    top: 0.05rem;
+    span {
+      color: #3395ff;
+      font-size: 0.4rem;
+      font-weight: 400;
     }
   }
 }

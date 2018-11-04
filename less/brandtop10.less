@@ -1,23 +1,23 @@
 @import 'base.less';
-/* 主体区域样式 */
 
+/* 主体区域样式 */
 #main {
   background-color: #f2f2f2;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 0.2rem;
   /* 十大品牌列表 */
   #brandTopList {
     width: 100%;
     .title {
-      height: 43px;
-      line-height: 43px;
-      padding-left: 8px;
-      border-top: 1px solid #ebebeb;
-      border-bottom: 1px solid #ccc;
+      height: 0.43rem;
+      line-height: 0.43rem;
+      padding-left: 0.08rem;
+      border-top: 0.01rem solid #ebebeb;
+      border-bottom: 0.01rem solid #ccc;
       background-color: #ebebeb;
       background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
       color: #874604;
-      font-size: 16px;
+      font-size: 0.16rem;
       font-weight: bold;
     }
     .content {
@@ -48,32 +48,33 @@
             .mui-navigate-right {
               display: block;
               border-bottom: 0;
-              font-size: 16px;
+              font-size: 0.16rem;
               font-weight: bold;
               display: flex;
               &::after {
                 color: #909090;
-                font-size: 20px;
+                font-size: 0.2rem;
                 font-weight: 600;
               }
               .left-num {
                 display: inline-block;
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
+                width: 0.2rem;
+                height: 0.2rem;
+                line-height: 0.2rem;
                 text-align: center;
                 color: white;
-                font-size: 12px;
-                margin-right: 10px;
+                font-size: 0.12rem;
+                margin-right: 0.1rem;
               }
               .right-brandinfo {
                 p {
                   color: #000000;
-                  font-size: 16px;
+                  font-size: 0.16rem;
                   font-weight: normal;
                   &.sale-title {
                     color: #999999;
-                    font-size: 12px;
+                    font-size: 0.12rem;
+                    margin-top: 0.05rem;
                   }
                 }
               }
@@ -86,15 +87,15 @@
   /* 销量列表 */
   #saleTopList {
     .title {
-      height: 36px;
-      line-height: 36px;
-      padding-left: 8px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      height: 0.36rem;
+      line-height: 0.36rem;
+      padding-left: 0.08rem;
+      border-top: 0.01rem solid #ccc;
+      border-bottom: 0.01rem solid #ccc;
       background-color: #ebebeb;
       background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
       color: #874604;
-      font-size: 14px;
+      font-size: 0.14rem;
       font-weight: bold;
     }
     .content {
@@ -103,20 +104,20 @@
           >a {
             white-space: normal;
             .mui-media-object {
-              max-width: 100px;
+              max-width: 1rem;
             }
             .mui-media-body {
               .product-info {
                 display: flex;
                 justify-content: space-between;
-                margin: 4px 0;
+                margin: 0.04rem 0;
                 .price {
-                  font-size: 18px;
+                  font-size: 0.18rem;
                   color: #ea3900;
                 }
                 span {
                   i {
-                    font-size: 18px;
+                    font-size: 0.18rem;
                     color: #ff9000;
                   }
                 }
@@ -131,7 +132,7 @@
                 -webkit-line-clamp: 2;
               }
               .price-and-comment {
-                font-size: 12px;
+                font-size: 0.12rem;
               }
             }
           }
@@ -139,7 +140,7 @@
       }
     }
     .history-price {
-      padding: 10px;
+      padding: 0.1rem;
       a {
         display: block;
         img {
@@ -151,33 +152,33 @@
   /* 用户评论列表 */
   #userComments {
     .title {
-      height: 36px;
-      line-height: 36px;
-      padding-left: 8px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
+      height: 0.36rem;
+      line-height: 0.36rem;
+      padding-left: 0.08rem;
+      border-top: 0.01rem solid #ccc;
+      border-bottom: 0.01rem solid #ccc;
       background-color: #ebebeb;
       background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
       color: #874604;
-      font-size: 14px;
+      font-size: 0.14rem;
       font-weight: bold;
     }
     .content {
       ul {
         li {
-          padding: 10px;
+          padding: 0.1rem;
           a {
             white-space: normal;
             .mui-media-object {
-              margin-right: 10px;
+              margin-right: 0.1rem;
               img {
-                width: 80px;
-                height: 80px;
+                width: 0.8rem;
+                height: 0.8rem;
               }
             }
             .mui-media-body {
-              height: 80px;
-              padding: 0 10px;
+              height: 0.8rem;
+              padding: 0 0.1rem;
               span {
                 /* 使文字显示固定行，溢出部分显示省略号 */
                 overflow: hidden;
@@ -191,28 +192,28 @@
         }
         .comment-info {
           background-color: #fff;
-          padding: 10px;
-          margin-top: 10px;
+          padding: 0.1rem;
+          margin-top: 0.1rem;
           .user-info {
             display: flex;
             justify-content: space-between;
-            margin: 4px 0;
+            margin: 0.04rem 0;
             .user-name {
-              font-size: 14px;
+              font-size: 0.14rem;
               color: #999999;
               i {
-                font-size: 16px;
+                font-size: 0.16rem;
                 color: #ff9000;
               }
             }
             >span {
-              font-size: 14px;
+              font-size: 0.14rem;
               color: #999999;
             }
           }
           .user-comment {
-            margin-top: 10px;
-            font-size: 15px;
+            margin-top: 0.1rem;
+            font-size: 0.15rem;
           }
         }
       }
@@ -221,15 +222,15 @@
   /* 底部标题 */
   #bottomHeader {
     .title {
-      height: 36px;
-      line-height: 36px;
-      padding-left: 8px;
-      border-top: 1px solid #ebebeb;
-      border-bottom: 1px solid #ccc;
+      height: 0.36rem;
+      line-height: 0.36rem;
+      padding-left: 0.08rem;
+      border-top: 0.01rem solid #ebebeb;
+      border-bottom: 0.01rem solid #ccc;
       background-color: #ebebeb;
       background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
       color: #5a5a5a;
-      font-size: 14px;
+      font-size: 0.14rem;
       a {
         color: #5a5a5a;
       }
